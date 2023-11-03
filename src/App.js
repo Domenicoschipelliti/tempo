@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "./style/style.css";
+import MyNav from "./Componets/MyNav";
+import MyCard from "./Componets/MyCard";
+import AltreCitta from "./Componets/AltreCitta";
+import MyBarrier from "./Componets/MyBarr";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <header className="color">
+      <BrowserRouter>
+        <MyNav />
+        <h2 className="text-center text-light mb-3">Città Più Cercate</h2>
+        <MyCard />
+        <Routes>
+          <Route element={<AltreCitta />} path="altre-citta" />
+        </Routes>
+        <MyBarrier />
+      </BrowserRouter>
+    </header>
   );
 }
 
