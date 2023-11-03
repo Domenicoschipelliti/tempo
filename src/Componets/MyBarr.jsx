@@ -9,7 +9,7 @@ const MyBarrier = () => {
             <Col xs={{ span: 6, offset: 3 }}>
               <Row>
                 <Col xs={12} className="text-left mb-2">
-                  <i className="fa fa-facebook footer-icon text-light"></i>
+                  <i className="fa fa-facebook text-light"></i>
                   <i className="fa fa-instagram footer-icon"></i>
                   <i className="fa fa-twitter footer-icon"></i>
                   <i className="fa fa-youtube footer-icon"></i>
