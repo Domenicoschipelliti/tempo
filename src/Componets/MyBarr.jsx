@@ -1,6 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
+// import { useNavigate } from "react-router-dom";
 
 const MyBarrier = () => {
+  // const navigate = useNavigate();
   return (
     <>
       <footer>
@@ -19,6 +21,7 @@ const MyBarrier = () => {
               <Row className="row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4 justify-content-center">
                 <Col xs={12} className="text-left mb-2">
                   <button
+                    // onClick={navigate("/altre-citta")}
                     type="button"
                     className="btn btn-sm footer-button rounded-0 mt-3 "
                   >

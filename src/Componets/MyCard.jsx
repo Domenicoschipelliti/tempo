@@ -2,7 +2,7 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const MyCard = () => (
-  <Container>
+  <Container className="mb-4">
     <Row className="d-flex justify-content-center">
       <Col md={5}>
         <Carousel>
