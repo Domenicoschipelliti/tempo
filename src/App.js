@@ -6,7 +6,7 @@ import MyNav from "./Componets/MyNav";
 import MyCard from "./Componets/MyCard";
 import AltreCitta from "./Componets/AltreCitta";
 import MyBarrier from "./Componets/MyBarr";
-import Api from "./Componets/Api";
+
 import Roma from "./Componets/Roma";
 import Messina from "./Componets/Messina";
 import Berlino from "./Componets/Berlino";
@@ -16,7 +16,7 @@ function App() {
     <header className="color">
       <BrowserRouter>
         <MyNav />
-        <h2 className="text-center text-light mb-3">Città Più Cercate</h2>
+        <h1 className="text-center text-light mb-3">Città Più Cercate</h1>
         <MyCard />
         <Routes>
           <Route element={<AltreCitta />} path="altre-citta" />
@@ -31,7 +31,6 @@ function App() {
           <Route element={<Berlino />} path="berlino" />
         </Routes>
         <MyBarrier />
-        <Api />
       </BrowserRouter>
     </header>
   );
