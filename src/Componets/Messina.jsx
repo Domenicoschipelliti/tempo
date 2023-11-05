@@ -26,6 +26,8 @@ class Messina extends Component {
             ...result.weather.map((te) => ({
               weather: {
                 main: te.main,
+                id: te.id,
+                description: te.description,
               },
             })),
           ],
@@ -44,13 +46,13 @@ class Messina extends Component {
         <Row className="justify-content-center">
           {this.state.weather.map((t) => {
             return (
-              <Col md={7}>
+              <Col md={7} key={t.weather.id}>
                 <img
                   src="https://messina-api.municipiumapp.it/s3/640x480/s3/4037/media/laghetto4.jpg"
                   alt="Messina"
                 />
-                <p className="text-light">Temperatura: max: | min:</p>
-                <p className="text-light">Tempo: {t.weather.main}</p>
+                <p className="text-light">Forcast: {t.weather.description}</p>
+                <p className="text-light">Current: {t.weather.main}</p>
               </Col>
             );
           })}

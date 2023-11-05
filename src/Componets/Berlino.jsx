@@ -8,7 +8,7 @@ class Berlino extends Component {
 
   Libero = () => {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?lat=38.1938137&lon=15.5540152&units=metric&appid=259374e52c2e45927ba4f90c9a197f9e"
+      "https://api.openweathermap.org/data/2.5/weather?lat=52.520007&lon=13.404954&units=metric&appid=259374e52c2e45927ba4f90c9a197f9e"
     )
       .then((res) => {
         if (res.ok) {
@@ -26,6 +26,8 @@ class Berlino extends Component {
             ...result.weather.map((te) => ({
               weather: {
                 main: te.main,
+                id: te.id,
+                description: te.description,
               },
             })),
           ],
@@ -44,13 +46,13 @@ class Berlino extends Component {
         <Row className="justify-content-center">
           {this.state.weather.map((t) => {
             return (
-              <Col md={7}>
+              <Col md={7} key={t.weather.id}>
                 <img
                   src="https://www.berlino.com/wp-content/uploads/sites/13/berlino-panorama.jpg"
                   alt="Messina"
                 />
-                <p className="text-light">Temperatura: max: | min:</p>
-                <p className="text-light">Tempo: {t.weather.main}</p>
+                <p className="text-light">Forecasts: {t.weather.description}</p>
+                <p className="text-light">Current: {t.weather.main}</p>
               </Col>
             );
           })}
