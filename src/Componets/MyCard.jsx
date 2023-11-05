@@ -1,4 +1,5 @@
 import { Carousel, Col, Container, Row } from "react-bootstrap";
+
 import { Link } from "react-router-dom";
 
 const MyCard = () => (
@@ -7,7 +8,7 @@ const MyCard = () => (
       <Col md={5}>
         <Carousel>
           <Carousel.Item interval={2000}>
-            <Link>
+            <Link to="messina">
               <img
                 src="https://messina-api.municipiumapp.it/s3/640x480/s3/4037/media/laghetto4.jpg"
                 alt="Messina"
@@ -19,7 +20,7 @@ const MyCard = () => (
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={2000}>
-            <Link>
+            <Link to="roma">
               <img
                 src="https://images.placesonline.com/photos/424012702200354_Roma_478173823.jpg?quality=80&w=550"
                 alt="Roma"
@@ -31,7 +32,7 @@ const MyCard = () => (
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={2500}>
-            <Link>
+            <Link to="berlino">
               <img
                 src="https://www.berlino.com/wp-content/uploads/sites/13/berlino-panorama.jpg"
                 alt="Berlino"

@@ -6,6 +6,10 @@ import MyNav from "./Componets/MyNav";
 import MyCard from "./Componets/MyCard";
 import AltreCitta from "./Componets/AltreCitta";
 import MyBarrier from "./Componets/MyBarr";
+import Api from "./Componets/Api";
+import Roma from "./Componets/Roma";
+import Messina from "./Componets/Messina";
+import Berlino from "./Componets/Berlino";
 
 function App() {
   return (
@@ -17,7 +21,17 @@ function App() {
         <Routes>
           <Route element={<AltreCitta />} path="altre-citta" />
         </Routes>
+        <Routes>
+          <Route element={<Roma />} path="roma" />
+        </Routes>
+        <Routes>
+          <Route element={<Messina />} path="messina" />
+        </Routes>
+        <Routes>
+          <Route element={<Berlino />} path="berlino" />
+        </Routes>
         <MyBarrier />
+        <Api />
       </BrowserRouter>
     </header>
   );
